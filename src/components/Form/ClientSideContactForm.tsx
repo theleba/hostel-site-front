@@ -1,6 +1,17 @@
 "use client";
 import { arsenal, arsenal_bold_italic } from "@/fonts";
-import { Button, Card, Col, Form, Input, InputNumber, Row } from "antd";
+import {
+  Button,
+  Card,
+  Col,
+  Form,
+  Input,
+  InputNumber,
+  Row,
+  notification,
+} from "antd";
+import InputMask from "react-input-mask";
+
 import FormItem from "antd/es/form/FormItem";
 import TextArea from "antd/es/input/TextArea";
 
@@ -9,12 +20,28 @@ interface labelsProps {
     name: string;
     message: string;
     send: string;
+    success: string;
   };
-  onSubmit?: () => void;
 }
-function ClientSideForm({ labels, onSubmit }: labelsProps) {
+function ClientSideForm({ labels }: labelsProps) {
+  const [form] = Form.useForm();
+
+  const handleSubmit = () => {
+    form.resetFields();
+
+    notification.success({
+      message: labels.success,
+      placement: "bottomRight",
+    });
+  };
+
   return (
-    <Form layout="vertical" style={{ maxWidth: 600 }} onFinish={onSubmit}>
+    <Form
+      form={form}
+      layout="vertical"
+      style={{ maxWidth: 600 }}
+      onFinish={handleSubmit}
+    >
       <FormItem
         name={`name`}
         label={<label className="text-white">{labels.name}</label>}

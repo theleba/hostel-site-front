@@ -12,14 +12,14 @@ const FullColorButton = dynamic(() => import("../Buttons/FullColorButton"), {
 function Hero() {
   const t = useTranslations();
   return (
-    <Row className="min-h-[90vh]">
+    <Row className="min-h-[80vh] md:min-h-[90vh]">
       <video className="hidden md:block" autoPlay muted loop id="bg_video">
         <source src="/videos/bg_video.mp4" type="video/mp4" />
       </video>
       <video className="block md:hidden" autoPlay muted loop id="bg_video">
         <source src="/videos/bg_video_mobile.mp4" type="video/mp4" />
       </video>
-      <Col xs={24} className={`min-h-[800px] md:min-h-[544px]`}>
+      <Col xs={24} className={`md:min-h-[800px]`}>
         <Header />
 
         <Row gutter={20} className="relative justify-center">
@@ -29,7 +29,7 @@ function Hero() {
             lg={8}
             className={` ${arsenal.className} top-[15vh] md:top-[30vh]  `}
           >
-            <h1 className="text-[40px] text-white pl-10 md:pl-7">
+            <h1 className=" text-white pl-5 text-[35px] md:text-[40px] md:pl-10">
               <span className="typing-effect" data-text="{t('hero_phrase')}">
                 {t("hero_phrase")}
               </span>

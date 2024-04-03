@@ -25,7 +25,7 @@ function Contact() {
         className="flex text-center justify-center items-center mt-10 align-middle"
       >
         <h2
-          className={` ${arsenal_bold_italic.className} drop-shadow text-[50px] text-white pl-10 md:pl-7`}
+          className={` ${arsenal_bold_italic.className} drop-shadow text-[50px] text-white  md:pl-7`}
         >
           {t("contact_phrase")}
         </h2>

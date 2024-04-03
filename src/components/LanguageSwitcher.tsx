@@ -19,7 +19,7 @@ const LanguageSwitcher = () => {
   }, [pathname]);
   return (
     <select
-      className="bg-[transparent] text-[#47E18E]"
+      className="bg-[transparent] text-[#47E18E] font-black"
       onChange={(e) => switchLanguage(e.target.value)}
     >
       <option value={"en"} className="text-black" selected={value == "/en"}>

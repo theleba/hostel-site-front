@@ -48,8 +48,6 @@ export default function Index({ params: { locale } }: IndexProps) {
 
   return (
     <main className="min-h-screen max-w-screen overflow-x-hidden ">
-      <h1>Home</h1>
-
       <Hero />
       <SecondSection />
       <Acommodations />

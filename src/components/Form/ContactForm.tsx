@@ -8,7 +8,12 @@ function ContactForm() {
     <div>
       {/* Outros componentes do lado do servidor, se necessário */}
       <ClientSideForm
-        labels={{ name: t("name"), message: t("message"), send: t("send") }}
+        labels={{
+          name: t("name"),
+          message: t("message"),
+          send: t("send"),
+          success: t("message_success"),
+        }}
       />
     </div>
   );

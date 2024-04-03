@@ -7,7 +7,7 @@ function WeCanOffer() {
 
   return (
     <Row
-      className="min-h-[500px] bg-[#F9F7F0] relative justify-center"
+      className="pb-10 min-h-[500px] bg-[#F9F7F0] relative justify-center"
       id="we_offer"
     >
       <Col xs={24} className="text-center mt-10">
@@ -22,7 +22,7 @@ function WeCanOffer() {
       </Col>
 
       <Col xs={24}>
-        <Row className="justify-center">
+        <Row className="justify-center" gutter={[20, 20]}>
           <Col xs={24} md={6} className="grid justify-center">
             <Card className="h-[250px] w-[250px] border-none bg-[url('/images/offer/1.png')] bg-center bg-cover">
               <h4
