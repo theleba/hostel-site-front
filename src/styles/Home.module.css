@@ -1,0 +1,5 @@
+/* styles/Home.module.css */
+.bg_gradient {
+  background: transparent linear-gradient(248deg, #dc1866 0%, #ff9226 100%) 0%
+    0% no-repeat padding-box;
+}
